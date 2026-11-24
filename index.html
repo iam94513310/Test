@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CALQ — Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true">
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+      <div class="grid"></div>
+    </div>
+
+    <main class="stage">
+      <header class="brand">
+        <p class="brand-mark">CALQ</p>
+        <h1 class="brand-line">Clear numbers. Quick math.</h1>
+      </header>
+
+      <section class="calc" aria-label="Calculator">
+        <div class="display" aria-live="polite">
+          <span class="expression" id="expression"></span>
+          <output class="result" id="display" for="keypad">0</output>
+        </div>
+
+        <div class="keypad" id="keypad" role="group" aria-label="Calculator keys">
+          <button type="button" class="key key-muted" data-action="clear">AC</button>
+          <button type="button" class="key key-muted" data-action="sign">±</button>
+          <button type="button" class="key key-muted" data-action="percent">%</button>
+          <button type="button" class="key key-op" data-op="÷">÷</button>
+
+          <button type="button" class="key" data-digit="7">7</button>
+          <button type="button" class="key" data-digit="8">8</button>
+          <button type="button" class="key" data-digit="9">9</button>
+          <button type="button" class="key key-op" data-op="×">×</button>
+
+          <button type="button" class="key" data-digit="4">4</button>
+          <button type="button" class="key" data-digit="5">5</button>
+          <button type="button" class="key" data-digit="6">6</button>
+          <button type="button" class="key key-op" data-op="−">−</button>
+
+          <button type="button" class="key" data-digit="1">1</button>
+          <button type="button" class="key" data-digit="2">2</button>
+          <button type="button" class="key" data-digit="3">3</button>
+          <button type="button" class="key key-op" data-op="+">+</button>
+
+          <button type="button" class="key key-zero" data-digit="0">0</button>
+          <button type="button" class="key" data-action="decimal">.</button>
+          <button type="button" class="key key-equals" data-action="equals">=</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
